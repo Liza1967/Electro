@@ -30,6 +30,52 @@ public static void main(String[] args) {
     Font Font2 = new Font("Times New Roman", 1, 30); 
     Font Font3 = new Font("Times New Roman", 1, 20);
     Font Font4 = new Font("Times New Roman", 0, 44);
+    
+  //создание кнопки
+    JButton button1 = new JButton();
+    button1.setText("Рассчитать"); // текст в кнопке
+    button1.setSize(150,80); // размеры кнопки
+    button1.setLocation(44,230); // расположение кнопки
+    button1.setBackground(Color.WHITE); // цвет кнопки
+    button1.setFont(Font3); // шрифт и размер текста в кнопке
+   
+    JButton button2 = new JButton();
+    button2.setText("Рассчитать");
+    button2.setSize(150,80);
+    button2.setLocation(343,230);
+    button2.setBackground(Color.WHITE);
+    button2.setFont(Font3);
+    
+    JButton button3 = new JButton();
+    button3.setText("Рассчитать");
+    button3.setSize(150,80);
+    button3.setLocation(638,230);
+    button3.setBackground(Color.WHITE);
+    button3.setFont(Font3);
+
+    // создание кнопки Radiobutton, выглядит как нажатая кнопка
+    JRadioButton button4 = new JRadioButton(); 
+    button4.setText("М"); // текст кнопки
+    button4.setSize(60,70); // размеры кнопки
+    button4.setLocation(473,45); // расположение кнопки
+    button4.setBackground(color1); // цвет кнопки 
+    button4.setFont(Font3); // шрифт и размер текста в кнопке
+
+    JRadioButton button5 = new JRadioButton();
+    button5.setText("Ж");
+    button5.setSize(60,70); 
+    button5.setBackground(color);
+    button5.setLocation(550,45);
+    button5.setFont(Font3);
+
+    // для отображения кнопок
+    frame.add(button1);
+    frame.add(button2);
+    frame.add(button3);
+    frame.add(button4);
+    frame.add(button5);
+
 }
 }
+
 
