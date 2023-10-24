@@ -26,9 +26,9 @@ public static void main(String[] args) {
     Color color = new Color(250, 170, 218); // цвет для  компонентов окна - розовый
     Color color1 = new Color(100, 149, 255); // цвет для компонентов окна - 
 
-    Font Font1 = new Font("Times New Roman", 1, 18); //  шрифт и размер текста 
-    Font Font2 = new Font("Times New Roman", 1, 30); 
-    Font Font3 = new Font("Times New Roman", 1, 20);
+    Font Font1 = new Font("Times New Roman", 1, 14); //  шрифт и размер текста 
+    Font Font2 = new Font("Times New Roman", 1, 24); 
+    Font Font3 = new Font("Times New Roman", 1, 16);
     Font Font4 = new Font("Times New Roman", 0, 44);
     
   //создание кнопки
@@ -139,6 +139,65 @@ public static void main(String[] args) {
     frame.add(text8);
     text8.setText("");
     text8.setFont(Font2);
+    
+ // создание текста
+    JLabel label1 = new JLabel();
+    label1.setSize(100,20); //размеры текстового окна
+    label1.setLocation(80,20); // расположение 
+    frame.add(label1); //  отображение 
+    label1.setText("Рост (см)"); // текст  
+    label1.setFont(Font1); // шрифт и размер текста
+    label1.setForeground(Color.BLACK); // цвет 
+
+    JLabel label2 = new JLabel();
+    label2.setSize(100,20);
+    label2.setLocation(310,20);
+    frame.add(label2);
+    label2.setText("Вес (кг)");
+    label2.setFont(Font1);
+    label2.setForeground(Color.BLACK);
+    
+    JLabel label3 = new JLabel();
+    label3.setSize(100,20);
+    label3.setLocation(525,20);
+    frame.add(label3);
+    label3.setText("Пол");
+    label3.setFont(Font1);
+    label3.setForeground(Color.BLACK);
+    
+    JLabel label4 = new JLabel();
+    label4.setSize(150,20);
+    label4.setLocation(700,20);
+    frame.add(label4);
+    label4.setText("Возраст (года)");
+    label4.setFont(Font1);
+    label4.setForeground(Color.BLACK);
+    
+    JLabel label5 = new JLabel();
+    label5.setSize(180,200);
+    label5.setLocation(48,100);
+    frame.add(label5);
+    label5.setText("<html> Суточная норма <br> потребления КБЖУ <html/>");
+    label5.setFont(Font1);
+    label5.setForeground(Color.BLACK);
+
+    JLabel label6 = new JLabel();
+    label6.setSize(200,200);
+    label6.setLocation(370, 102);
+    label6.setBackground(Color.PINK);
+    frame.add(label6);
+    label6.setText("<html> Индекс <br> массы тела <html/>");
+    label6.setFont(Font1);
+    label6.setForeground(Color.BLACK);
+
+    JLabel label7 = new JLabel();
+    label7.setSize(300,200);
+    label7.setLocation(640,97);
+    label7.setBackground(Color.PINK);
+    frame.add(label7);
+    label7.setText("<html>Суточная <br> норма потребления <br> жидкости<html/>");
+    label7.setFont(Font1);
+    label7.setForeground(Color.BLACK);
 
 }
 }
