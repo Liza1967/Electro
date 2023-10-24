@@ -1,16 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.TrayIcon.MessageType;
 import java.util.concurrent.BlockingQueue;
-
-/*import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import java.awt.event.*;
-import javax.swing.event.*;*/
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JTextField.*;
 import javax.swing.text.Style;
 public class App {
@@ -198,8 +197,97 @@ public static void main(String[] args) {
     label7.setText("<html>Суточная <br> норма потребления <br> жидкости<html/>");
     label7.setFont(Font1);
     label7.setForeground(Color.BLACK);
+    
+    // при нажатии кнопки изменение цвета кнопки и очищение результата в окнах
+    button4.addActionListener(new ActionListener() { //
+        @Override // 
+        public void actionPerformed(ActionEvent e){
+             button4.setBackground(Color.green); 
+             button5.setBackground(Color.pink);
+             text6.setText("");
+             text7.setText("");
+             text8.setText("");
+             }
+             
+     });
 
+     button5.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e){
+             button5.setBackground(Color.green);
+             button4.setBackground(Color.cyan);
+             text6.setText("");
+             text7.setText("");
+             text8.setText("");
+        
+            
+        }
+     });
+
+     //
+     ButtonGroup group = new ButtonGroup();        
+     group.add(button5);
+     group.add(button4);
+
+     // при нажатии кнопки:
+     button1.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e){
+         try { 
+             // считывание значений введенных пользователем
+             int height = Integer.parseInt(text1.getText()); 
+             int weight = Integer.parseInt(text2.getText());
+             int age = Integer.parseInt(text4.getText());
+             double result = 0; // первоначальное значение результата формулы
+             if (button4.isSelected()){ 
+                 // если нажата кнопка "Ж", то результат считается по формуле:
+             result = (10*weight + 6.25*height-5*age)-161; // enter formula
+             }
+             else {
+                 // если нажата кнопка "М", то результат считается по формуле:
+                 result = (10*weight + 6.25*height-5*age)+5;
+             }
+             // вывод результата в окно:
+             text6.setText(String.valueOf(result));
+
+         } catch(Exception ex) {
+             //JOptionPane.showMessageDialog(this, ex.getMessage(), "Ошибка", MessageType.ERROR);
+         }
+        
+     }
+ } );
+     //при нажатии кнопки:
+     button2.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e){
+         try {
+             double height = Integer.parseInt(text1.getText());
+             int weight = Integer.parseInt(text2.getText());
+             double result1 = weight/(Math.pow(height/100,2));
+             text7.setText(String.format("%.2f",result1)); // результат с двумя числами после запятой
+         } catch(Exception ex) {
+             //JOptionPane.showMessageDialog(this, ex.getMessage(), "Ошибка", MessageType.ERROR);
+         }
+        }
+     });
+     // при нажатии кнопки:
+     button3.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e){
+         try {
+             int weight = Integer.parseInt(text2.getText());
+             double result2 = weight*30; // enter formula
+             text8.setText(String.valueOf(result2));
+         } catch(Exception ex) {
+             //JOptionPane.showMessageDialog(this, ex.getMessage(), "Ошибка", MessageType.ERROR);
+         }
+         
+        }
+     });
+   }
 }
-}
+     
+ 
+
 
 
