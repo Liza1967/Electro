@@ -8,7 +8,7 @@ public class GUI {
     private static JFrame frame;
 
     public void create(){  
-        frame = new JFrame("Фитнес-Калькулятор"); // создание окна
+        frame = new JFrame("IUI"); // создание окна
         frame.setLayout(new BorderLayout()); //
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие программы 
         frame.setSize(900, 550); // размеры окна
