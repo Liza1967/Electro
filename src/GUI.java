@@ -9,7 +9,7 @@ public class GUI {
 
     public void create(){  
     	//
-        frame = new JFrame("Новый Фитнес-Калькулятор"); // создание окна
+        frame = new JFrame("Новейший Фитнес-КалькуляторFGH "); // создание окна TG
         frame.setLayout(new BorderLayout()); //
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие программы 
         frame.setSize(900, 550); // размеры окна

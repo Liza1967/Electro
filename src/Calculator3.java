@@ -33,7 +33,7 @@ public class Calculator3 implements ActionListener {
              double weight=dec.getWeight();
              text8.setText(String.valueOf(dec.fourth(weight)));
          } catch(Exception ex) {
-             //JOptionPane.showMessageDialog(this, ex.getMessage(), "Ошибка", MessageType.ERROR);
+             
          }
          };
 
