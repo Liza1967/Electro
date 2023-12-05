@@ -8,6 +8,7 @@ public class GUI {
     private static JFrame frame;
 
     public void create(){  
+    	//kol;
         frame = new JFrame("IUI"); // создание окна
         frame.setLayout(new BorderLayout()); //
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие программы 
